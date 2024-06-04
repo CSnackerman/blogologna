@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="bologna" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 961 947">
+  <defs>
+    <radialGradient id="radial-gradient" cx="361.5" cy="208.5" fx="361.5" fy="208.5" r="7" gradientUnits="userSpaceOnUse">
+      <stop offset=".86" stop-color="#cca387"/>
+      <stop offset=".93" stop-color="#daae8f"/>
+      <stop offset="1" stop-color="#e5b695"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="276" cy="411" fx="276" fy="411" r="23.5" gradientUnits="userSpaceOnUse">
+      <stop offset=".86" stop-color="#cca88f"/>
+      <stop offset=".93" stop-color="#dab092"/>
+      <stop offset="1" stop-color="#e5b695"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="392" cy="753" fx="392" fy="753" r="23.5" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-4" cx="701" cy="601" fx="701" fy="601" r="23.5" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-5" cx="137.5" cy="279.5" fx="137.5" fy="279.5" r="15" xlink:href="#radial-gradient"/>
+    <linearGradient id="linear-gradient" x1="155.5" y1="601" x2="202.5" y2="601" gradientTransform="translate(62.86 159.73) scale(.6 .72)" gradientUnits="userSpaceOnUse">
+      <stop offset=".35" stop-color="#e5b695"/>
+      <stop offset=".86" stop-color="#cca68d"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient-6" cx="671" cy="271" fx="671" fy="271" r="23.5" gradientTransform="translate(440.85 78.99) scale(.32 .68)" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-7" cx="628" cy="483" fx="628" fy="483" r="18.5" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-8" cx="517" cy="157" fx="517" fy="157" r="23.5" gradientTransform="translate(84 22.72) scale(.83)" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-9" cx="610" cy="762" fx="610" fy="762" r="23.5" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-10" cx="466" cy="501" fx="466" fy="501" r="23.5" gradientTransform="translate(235.37 152.39) scale(.47 .68)" gradientUnits="userSpaceOnUse">
+      <stop offset=".86" stop-color="#cca992"/>
+      <stop offset=".93" stop-color="#dab093"/>
+      <stop offset="1" stop-color="#e5b695"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="480.5" cy="473.5" rx="477" ry="470" style="fill: #e5b695; stroke: #ab272d; stroke-miterlimit: 10; stroke-width: 7px;"/>
+  <circle cx="361.5" cy="208.5" r="7" style="fill: url(#radial-gradient);"/>
+  <circle cx="276" cy="411" r="23.5" style="fill: url(#radial-gradient-2);"/>
+  <circle cx="392" cy="753" r="23.5" style="fill: url(#radial-gradient-3);"/>
+  <circle cx="701" cy="601" r="23.5" style="fill: url(#radial-gradient-4);"/>
+  <circle cx="137.5" cy="279.5" r="15" style="fill: url(#radial-gradient-5);"/>
+  <ellipse cx="169.5" cy="594.5" rx="14" ry="17" style="fill: url(#linear-gradient);"/>
+  <ellipse cx="655" cy="263.5" rx="7.5" ry="16" style="fill: url(#radial-gradient-6);"/>
+  <circle cx="628" cy="483" r="18.5" style="fill: url(#radial-gradient-7);"/>
+  <circle cx="513" cy="153" r="19.5" style="fill: url(#radial-gradient-8);"/>
+  <circle cx="610" cy="762" r="23.5" style="fill: url(#radial-gradient-9);"/>
+  <circle cx="848.5" cy="395.5" r="31" style="fill: #ddb192;"/>
+  <ellipse cx="453.5" cy="493.5" rx="11" ry="16" style="fill: url(#radial-gradient-10);"/>
+</svg>
