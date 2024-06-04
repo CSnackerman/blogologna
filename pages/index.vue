@@ -9,15 +9,14 @@
   </p>
 
   <p>
-    The goal here is to create an easy-to-use platform for authors to be able to
-    publish articles. There is no need for registration here. Enjoy
-    <u>absolute anonymity</u> or <u>distinguished recognition</u>—the choice is
-    yours.
+    The goal here is to create an easy-to-use platform for authors to be able to publish articles.
+    There is no need for registration here. Enjoy
+    <u>absolute anonymity</u> or <u>distinguished recognition</u>—the choice is yours.
   </p>
 
   <p>
-    Data is open and free. You can view statistics about authors, articles,
-    comments, and commenters.
+    Data is open and free. You can view statistics about authors, articles, comments, and
+    commenters.
   </p>
 
   <p><strong>Zero</strong> advertisements.</p>

@@ -16,8 +16,6 @@ describe.concurrent('Suite: utils', () => {
 
     await expect(fakeFetch(data, 50, 0)).resolves.toEqual(data);
 
-    await expect(fakeFetch(data, 50, 100)).rejects.toThrowError(
-      'fake fetch failed'
-    );
+    await expect(fakeFetch(data, 50, 100)).rejects.toThrowError('fake fetch failed');
   });
 });

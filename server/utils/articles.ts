@@ -31,12 +31,10 @@ const ArticleJourneyIntoTheJungle: ArticleContent = {
 
 const ArticleMetaphysicalExperiments: ArticleContent = {
   title: 'Metaphysical Experiments',
-  content:
-    'Some information about conducting experiments beyond the capabilities of science.',
+  content: 'Some information about conducting experiments beyond the capabilities of science.',
 } as const;
 
 const ArticleHeartOfHatred: ArticleContent = {
   title: 'Heart of Hatred',
-  content:
-    'Details about the difficulties of living with hatred within the heart.',
+  content: 'Details about the difficulties of living with hatred within the heart.',
 } as const;

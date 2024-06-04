@@ -10,9 +10,7 @@
 </template>
 
 <script setup lang="ts">
-  import ArticleCard, {
-    type ArticleCardProps,
-  } from '@/components/ArticleCard.vue';
+  import ArticleCard, { type ArticleCardProps } from '@/components/ArticleCard.vue';
 
   const articles: ArticleCardProps[] = [
     {
@@ -31,8 +29,7 @@
     {
       title: 'Metaphysical Experiments',
       author: 'Col Ackerman',
-      summary:
-        'Application of the scientific method to metaphyiscal hypotheses.',
+      summary: 'Application of the scientific method to metaphyiscal hypotheses.',
       thumbnail: '/thumbnails/metaphysics.webp',
     },
     {
