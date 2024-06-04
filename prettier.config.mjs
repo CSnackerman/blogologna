@@ -10,6 +10,7 @@ const config = {
   singleQuote: true,
   vueIndentScriptAndStyle: true,
   singleAttributePerLine: true,
+  proseWrap: 'always',
 };
 
 export default config;
