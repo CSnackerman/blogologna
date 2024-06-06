@@ -15,7 +15,7 @@
     <img
       :src="thumbnail"
       :alt="thumbnail.split('/').slice(-1)[0]"
-    >
+    />
     <div>
       <h3>{{ title }}</h3>
       <p>{{ summary }}</p>

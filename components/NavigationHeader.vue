@@ -2,12 +2,12 @@
   <nav>
     <NuxtLink to="/">
       <img
-        alt="Vue logo"
+        alt="Bologna"
         class="logo"
         src="~/assets/svg/logo.svg"
         width="125"
         height="125"
-      >
+      />
     </NuxtLink>
     <NuxtLink to="/why">Why?</NuxtLink>
     <NuxtLink to="/articles">Articles</NuxtLink>
