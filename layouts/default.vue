@@ -11,9 +11,16 @@
 </template>
 
 <style scoped lang="scss">
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
   .nav-header,
   main {
     padding: 0.5em 1.5em;
+    margin-bottom: 5em;
   }
 
   main {

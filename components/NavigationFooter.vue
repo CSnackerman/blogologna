@@ -13,12 +13,12 @@
 <style scoped lang="scss">
   nav {
     font-size: 0.7em;
-    opacity: 0.8;
     display: flex;
     justify-content: space-around;
     background-color: olivedrab;
     width: 100%;
     padding: 0.5em;
+    padding-bottom: 2em;
   }
 
   a {
