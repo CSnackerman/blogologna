@@ -1,44 +1,26 @@
 <template>
   <h1>Browse</h1>
   <div>
+    <h2 v-if="pending">Loading...</h2>
     <ArticleCard
       v-for="(article, idx) in articles"
+      v-else-if="!error"
       :key="idx"
       :article-card="article"
     />
+    <p v-else>{{ error.status?.toString() }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-  import ArticleCard, { type ArticleCardProps } from '@/components/ArticleCard.vue';
+  import ArticleCard from '~/components/ArticleCard.vue';
+  import { toArticleCards } from '~/types/models/article_models';
 
-  const articles: ArticleCardProps[] = [
-    {
-      title: 'Bizarre Beliefs',
-      author: 'Col Ackerman',
-      summary:
-        'An accounting about strange and uncommon beliefs that I have come to hold over the years.',
-      thumbnail: '/thumbnails/Dio_Brando.jpg',
-    },
-    {
-      title: 'Journey into the Jungle',
-      author: 'Col Ackerman',
-      summary: 'On parallel realms and how to find them.',
-      thumbnail: '/thumbnails/palm_tree.jpg',
-    },
-    {
-      title: 'Metaphysical Experiments',
-      author: 'Col Ackerman',
-      summary: 'Application of the scientific method to metaphyiscal hypotheses.',
-      thumbnail: '/thumbnails/metaphysics.webp',
-    },
-    {
-      title: 'Heart of Hatred',
-      author: 'Col Ackerman',
-      summary: "It ain't easy being cheesy.",
-      thumbnail: '/thumbnails/burning_heart.jpg',
-    },
-  ];
+  const {
+    data: articles,
+    pending,
+    error,
+  } = await useLazyFetch('/api/articles', { transform: toArticleCards });
 </script>
 
 <style scoped lang="scss">

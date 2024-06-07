@@ -8,4 +8,7 @@ export default defineNuxtConfig({
       // stylistic: true
     },
   },
+  imports: {
+    dirs: ['types'],
+  },
 });

@@ -8,11 +8,13 @@
 </template>
 
 <script setup lang="ts">
+  import { toArticlePage } from '~/types/models/article_models';
+
   const route = useRoute();
 
   const {
     data: article,
     pending,
     error,
-  } = await useLazyFetch(`/api/article/${route.params.article_id}`);
+  } = await useLazyFetch(`/api/article/${route.params.id}`, { transform: toArticlePage });
 </script>

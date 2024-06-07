@@ -1,11 +1,7 @@
 <script setup lang="ts">
-  export interface ArticleCardProps {
-    title: string;
-    author: string;
-    summary: string;
-    thumbnail: string;
-  }
-  const props = defineProps<{ articleCard: ArticleCardProps }>();
+  import type { ArticleCard_VModel } from '~/types/models/article_models';
+
+  const props = defineProps<{ articleCard: ArticleCard_VModel }>();
 
   const { title, author, summary, thumbnail } = props.articleCard;
 </script>
