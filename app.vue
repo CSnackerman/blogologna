@@ -1,11 +1,6 @@
 <template>
   <NuxtLayout>
-    <template #header>
-      <NavigationHeader />
-    </template>
-    <template #main>
-      <NuxtPage />
-    </template>
+    <NuxtPage />
   </NuxtLayout>
 </template>
 
