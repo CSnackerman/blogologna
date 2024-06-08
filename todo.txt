@@ -1,0 +1,5 @@
+Issues:
+  1. Article content is plaintext. 
+
+Tasks:
+  1. Rework architecture to support embedding html or using markdown (nuxt content).

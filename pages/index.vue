@@ -8,8 +8,12 @@
       </i>
     </span>
     or
-    <i><strong>Blog-uh-lōn-ee</strong></i>
-    or any way you please.
+    <span class="pronounced">
+      <i>
+        <strong>Blog-uh-lōn-ee</strong>
+      </i>
+      or any way you please.
+    </span>
   </p>
   <p>These days journalism/blog sites are corrupted and polluted by ads, pop-ups, and pay-walls.</p>
   <p>Enjoy a simple, straightforward, and tidy experience as both publisher and reader.</p>
