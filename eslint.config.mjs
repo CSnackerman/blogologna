@@ -3,8 +3,7 @@ import withNuxt from './.nuxt/eslint.config.mjs';
 
 // prettier-ignore
 export default withNuxt({
-  rules: { 
-    'vue/no-multiple-template-root': 0, 
+  rules: {
     'vue/html-self-closing': 0,
   },
 });

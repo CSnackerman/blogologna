@@ -1,13 +1,15 @@
 <template>
-  <header>
-    <NavigationHeader class="nav-header" />
-  </header>
-  <main>
-    <slot>Missing content</slot>
-  </main>
-  <footer>
-    <NavigationFooter class="foot" />
-  </footer>
+  <div class="default-layout">
+    <header>
+      <NavigationHeader class="nav-header" />
+    </header>
+    <main>
+      <slot></slot>
+    </main>
+    <footer>
+      <NavigationFooter class="foot" />
+    </footer>
+  </div>
 </template>
 
 <style scoped lang="scss">

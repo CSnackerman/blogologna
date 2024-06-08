@@ -1,31 +1,35 @@
 <template>
-  <h2>Welcome to Blogologna</h2>
-  <p>
-    Pronounced
-    <span class="pronounced">
-      <i>
-        <strong>Blog-uh-log-nuh</strong>
-      </i>
-    </span>
-    or
-    <span class="pronounced">
-      <i>
-        <strong>Blog-uh-lōn-ee</strong>
-      </i>
-      or any way you please.
-    </span>
-  </p>
-  <p>These days journalism/blog sites are corrupted and polluted by ads, pop-ups, and pay-walls.</p>
-  <p>Enjoy a simple, straightforward, and tidy experience as both publisher and reader.</p>
-  <p>No registration required.</p>
-  <p class="ads">
-    <span class="zero">Zer<span class="zero-o">ø</span></span>
-    ads.
-  </p>
-  <p>
-    Data is open and free. You can view statistics about authors, articles, comments, and
-    commenters.
-  </p>
+  <div class="page-index">
+    <h2>Welcome to Blogologna</h2>
+    <p>
+      Pronounced
+      <span class="pronounced">
+        <i>
+          <strong>Blog-uh-log-nuh</strong>
+        </i>
+      </span>
+      or
+      <span class="pronounced">
+        <i>
+          <strong>Blog-uh-lōn-ee</strong>
+        </i>
+        or any way you please.
+      </span>
+    </p>
+    <p>
+      These days journalism/blog sites are corrupted and polluted by ads, pop-ups, and pay-walls.
+    </p>
+    <p>Enjoy a simple, straightforward, and tidy experience as both publisher and reader.</p>
+    <p>No registration required.</p>
+    <p class="ads">
+      <span class="zero">Zer<span class="zero-o">ø</span></span>
+      ads.
+    </p>
+    <p>
+      Data is open and free. You can view statistics about authors, articles, comments, and
+      commenters.
+    </p>
+  </div>
 </template>
 
 <script setup lang="ts"></script>

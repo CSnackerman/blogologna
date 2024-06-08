@@ -1,14 +1,16 @@
 <template>
-  <h1>Browse</h1>
-  <div>
-    <h2 v-if="pending">Loading...</h2>
-    <ArticleCard
-      v-for="(article, idx) in articles"
-      v-else-if="!error"
-      :key="idx"
-      :article-card="article"
-    />
-    <p v-else>{{ error.status?.toString() }}</p>
+  <div class="page-articles">
+    <h1>Browse</h1>
+    <div>
+      <h2 v-if="pending">Loading...</h2>
+      <ArticleCard
+        v-for="(article, idx) in articles"
+        v-else-if="!error"
+        :key="idx"
+        :article-card="article"
+      />
+      <p v-else>{{ error.status?.toString() }}</p>
+    </div>
   </div>
 </template>
 
