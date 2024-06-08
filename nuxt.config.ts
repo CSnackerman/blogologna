@@ -11,4 +11,5 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['types'],
   },
+  ssr: false,
 });
