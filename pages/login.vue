@@ -15,6 +15,7 @@
           v-model="email"
           type="email"
           placeholder="enter your email"
+          tabindex="0"
           @focus="isEmailFocused = true"
           @focusout="isEmailFocused = false"
         />
@@ -33,11 +34,13 @@
             v-model="password"
             :type="isPasswordVisible === true ? 'text' : 'password'"
             placeholder="enter your password"
+            tabindex="0"
             @focus="isPasswordFocused = true"
             @focusout="isPasswordFocused = false"
           />
           <button
             id="eyeball"
+            tabindex="-1"
             @click.prevent="togglePasswordVisible"
           >
             <Icon
@@ -53,6 +56,7 @@
         <div class="login-btn-container">
           <button
             class="login-btn"
+            tabindex="0"
             @click.prevent="login"
           >
             Log in
@@ -112,10 +116,10 @@
 <style scoped lang="scss">
   @keyframes spin {
     to {
-      transform: translate(-25%, -25%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
     }
     from {
-      transform: translate(-25%, -25%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
     }
   }
 
@@ -134,7 +138,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     max-width: min-content;
-    // padding: 1em;
   }
 
   .login-page::after {
@@ -143,11 +146,11 @@
     background-image: url('~/assets/svg/logo.svg');
     background-repeat: no-repeat;
     padding: 3em;
-    width: 150%;
+    width: 14em;
     aspect-ratio: 1/1;
     border-radius: 100%;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     z-index: -10;
 
     animation: spin 30s linear infinite;
@@ -168,6 +171,11 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 2em;
+
+    & *:focus {
+      border: 2px solid white;
+      border-radius: 0.2em;
+    }
 
     & > div {
       display: flex;
@@ -192,16 +200,16 @@
     height: 1.4em;
     padding: 0.3em;
     background-color: goldenrod;
-    border: 2px solid transparent;
+    border: 1px solid green;
     border-radius: 0.2em;
-    transition: all 300ms ease-in-out;
+    transition: all 200ms ease-in-out;
 
     &::placeholder {
       color: darkslategray;
     }
 
     &:focus {
-      border: 2px solid pink;
+      border: 2px solid rgb(255, 212, 219);
       outline: none;
     }
   }
@@ -221,6 +229,10 @@
     padding: 5px;
     cursor: pointer;
     transform: translateY(50%);
+
+    &:focus {
+      border: none;
+    }
   }
 
   .password-container {
