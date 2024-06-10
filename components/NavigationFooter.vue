@@ -21,6 +21,13 @@
     padding-bottom: 2em;
   }
 
+  @media only screen and (max-width: 600px) {
+    nav {
+      padding: 0.5em;
+      font-size: 0.6em;
+    }
+  }
+
   a {
     all: unset;
     cursor: pointer;
