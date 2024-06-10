@@ -19,7 +19,7 @@
     <p>
       These days journalism/blog sites are corrupted and polluted by ads, pop-ups, and pay-walls.
     </p>
-    <p>Enjoy a simple, straightforward, and tidy experience as both publisher and reader.</p>
+    <p>Enjoy a simple and sanitary experience as both publisher and reader.</p>
     <p>No registration required.</p>
     <p class="ads">
       <span class="zero">Zer<span class="zero-o">ø</span></span>
