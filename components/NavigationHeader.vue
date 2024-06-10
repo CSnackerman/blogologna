@@ -1,16 +1,25 @@
 <template>
   <nav>
-    <NuxtLink to="/">
-      <img
-        alt="Bologna"
-        class="logo"
-        src="~/assets/svg/logo.svg"
-        width="125"
-        height="125"
-      />
-    </NuxtLink>
-    <NuxtLink to="/why">Why?</NuxtLink>
-    <NuxtLink to="/articles">Articles</NuxtLink>
+    <div
+      class="links"
+      style="margin-right: 1em"
+    >
+      <NuxtLink to="/">
+        <img
+          alt="Bologna"
+          class="logo"
+          src="~/assets/svg/logo.svg"
+          width="125"
+          height="125"
+        />
+      </NuxtLink>
+      <NuxtLink to="/why">Why?</NuxtLink>
+      <NuxtLink to="/articles">Articles</NuxtLink>
+    </div>
+    <div class="links account">
+      <RegisterLoginLink button-type="register" />
+      <RegisterLoginLink button-type="login" />
+    </div>
   </nav>
 </template>
 
@@ -19,8 +28,22 @@
 <style scoped lang="scss">
   nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 2em;
+    max-width: 100%;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .links {
+      font-size: 0.7em;
+    }
   }
 
   @mixin on-hover($scale-max) {

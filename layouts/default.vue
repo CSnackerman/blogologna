@@ -29,6 +29,13 @@
     padding-top: 0;
   }
 
+  @media only screen and (max-width: 600px) {
+    main {
+      font-size: 0.9em;
+      padding: 0.2em 0.5em;
+    }
+  }
+
   .nav-header {
     z-index: 10;
     margin-bottom: 2em;
