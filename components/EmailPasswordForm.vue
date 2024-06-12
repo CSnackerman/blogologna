@@ -8,7 +8,11 @@
       }"
     >
       <div class="title">{{ title.toLocaleUpperCase() }}</div>
-      <form id="login-form">
+      <form
+        id="login-form"
+        @submit.prevent
+        @keydown.enter.prevent="mode === 'login' ? login() : register()"
+      >
         <div class="email-container">
           <label for="email-input">
             <span
@@ -45,7 +49,6 @@
           <div class="password-input-container">
             <input
               id="password-input"
-              ref="passwordInput"
               v-model="password"
               :type="isPasswordVisible === true ? 'text' : 'password'"
               placeholder="enter your password"
@@ -55,6 +58,7 @@
             />
             <button
               id="eyeball"
+              ref="eyeballRef"
               tabindex="-1"
               @click.prevent="togglePasswordVisible"
             >
@@ -98,9 +102,10 @@
   const supabaseClient = useSupabaseClient<Database>();
 
   // element refs
-  const passwordInput = ref<HTMLInputElement>();
+  const eyeballRef = ref<HTMLButtonElement | null>();
 
   // state refs
+
   const title = computed(() => (props.mode === 'login' ? 'Log in' : 'Register'));
   const email = ref<string>('');
   const password = ref<string>('');
@@ -213,7 +218,14 @@
     // if (error) console.log(error);
   }
 
-  function togglePasswordVisible() {
+  function togglePasswordVisible(e: Event) {
+    // hacky fix for weird toggle behavior on enter press
+    // aka i suck at bubble/capture
+    const t = e.target as HTMLElement;
+    if (t !== eyeballRef.value && !['svg', 'path'].includes(t.nodeName)) {
+      return;
+    }
+
     isPasswordVisible.value = !isPasswordVisible.value;
   }
 </script>
