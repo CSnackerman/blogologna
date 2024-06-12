@@ -1,5 +1,11 @@
 import type { RegisterEmailError } from './validate_registrant';
 
+export const defaultRegisterEmailError: RegisterEmailError = {
+  errorCount: 2,
+  empty: true,
+  invalid: true,
+};
+
 export function getRegisterEmailInvalids(email: string): RegisterEmailError {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // chatgpt
   const isValid = emailRegex.test(email);
@@ -16,18 +22,12 @@ export function getRegisterEmailInvalids(email: string): RegisterEmailError {
 
 export function getRegisterEmailErrorMessage(emailError: RegisterEmailError): string {
   if (emailError.empty) {
-    return 'please provide an email address';
+    return 'missing email address';
   }
 
   if (emailError.invalid) {
-    return 'please provide a valid email address';
+    return 'invalid email address';
   }
 
   return '';
 }
-
-export const defaultRegisterEmailError: RegisterEmailError = {
-  errorCount: 2,
-  empty: true,
-  invalid: true,
-};

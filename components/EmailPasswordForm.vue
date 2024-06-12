@@ -12,10 +12,11 @@
         <div class="email-container">
           <label for="email-input">
             <span
-              class="email-error-message"
+              class="error-message"
               :style="{ opacity: isEmailErrorVisible ? 1 : 0 }"
-              >{{ errorMessage }}</span
             >
+              {{ emailErrorMessage }}
+            </span>
             <div :class="{ pulsing: isEmailFocused }">email</div>
           </label>
           <input
@@ -33,7 +34,13 @@
             for="password-label"
             :class="{ pulsing: isPasswordFocused }"
           >
-            password
+            <span
+              class="error-message"
+              :style="{ opacity: isPasswordErrorVisible ? 1 : 0 }"
+            >
+              {{ passwordErrorMessage }}
+            </span>
+            <div :class="{ pulsing: isPasswordFocused }">password</div>
           </label>
           <div class="password-input-container">
             <input
@@ -102,9 +109,11 @@
   const isPasswordFocused = ref<boolean>(false);
   const emailError = ref<RegisterEmailError>(defaultRegisterEmailError);
   const passwordError = ref<RegisterPasswordError>(defaultRegisterPasswordError);
+  const isPasswordErrorVisible = ref<boolean>(false);
   const isEmailErrorVisible = ref<boolean>(false);
+  const emailErrorMessage = ref<string>('');
+  const passwordErrorMessage = ref<string>('');
   const supabaseErrorMessage = ref<string | null>(null);
-  const errorMessage = ref<string>('');
 
   // watches
   watch(password, validateRegisterPassword);
@@ -128,26 +137,42 @@
     validateRegisterEmail();
     validateRegisterPassword();
 
+    let isValid = true;
+
     if (emailError.value.errorCount > 0) {
-      updateErrorMessage();
-      return false;
+      updateRegisterEmailErrorMessages();
+      isValid = false;
     }
 
-    return true;
+    if (passwordError.value.errorCount > 0) {
+      updateRegisterPasswordErrorMessages();
+      isValid = false;
+    }
+
+    return isValid;
   }
 
-  function updateErrorMessage() {
+  function updateRegisterEmailErrorMessages() {
     isEmailErrorVisible.value = true;
-    errorMessage.value = getRegisterEmailErrorMessage(emailError.value);
+    emailErrorMessage.value = getRegisterEmailErrorMessage(emailError.value);
 
     if (supabaseErrorMessage.value) {
-      errorMessage.value = supabaseErrorMessage.value;
+      emailErrorMessage.value = supabaseErrorMessage.value;
     }
+  }
+
+  function updateRegisterPasswordErrorMessages() {
+    isPasswordErrorVisible.value = true;
+    passwordErrorMessage.value = getRegisterPasswordErrorMessage(passwordError.value);
   }
 
   function clearErrors() {
     isEmailErrorVisible.value = false;
-    errorMessage.value = '';
+    emailErrorMessage.value = '';
+
+    isPasswordErrorVisible.value = false;
+    passwordErrorMessage.value = '';
+
     supabaseErrorMessage.value = null;
   }
 
@@ -168,7 +193,7 @@
       if (error) {
         isEmailErrorVisible.value = true;
         supabaseErrorMessage.value = error.message;
-        updateErrorMessage();
+        updateRegisterEmailErrorMessages();
 
         throw createError(error.message);
       }
@@ -177,7 +202,6 @@
     }
   }
 
-  // functions
   async function login() {
     // const { error } = await supabaseClient.auth.signInWithPassword({
     //   email: email.value,
@@ -192,13 +216,6 @@
 </script>
 
 <style scoped lang="scss">
-  .requirements-checklist {
-    position: fixed;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%);
-  }
-
   @keyframes spin {
     to {
       transform: translate(-50%, -50%) rotate(360deg);
@@ -212,6 +229,20 @@
     to {
       transform: scale(1.1);
     }
+  }
+
+  .requirements-checklist {
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(0, 128, 0, 0.143);
+    border-radius: 0.5em;
+    // aspect-ratio: 1/1;
+    padding: 1.2em;
+
+    // display: grid;
+    // place-content: center;
   }
 
   .email-password-form {
@@ -381,7 +412,7 @@
     opacity: 0;
   }
 
-  .email-error-message {
+  .error-message {
     font-size: 0.7em;
     text-align: end;
     color: red;
@@ -391,6 +422,6 @@
     text-decoration-color: red;
     text-underline-offset: 3px;
     overflow: visible;
-    text-wrap: nowrap;
+    text-wrap: wrap;
   }
 </style>

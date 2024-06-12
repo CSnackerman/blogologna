@@ -1,5 +1,14 @@
 import type { RegisterPasswordError } from './validate_registrant';
 
+export const defaultRegisterPasswordError: RegisterPasswordError = {
+  errorCount: 5,
+  empty: true,
+  tooShort: true,
+  missingCapital: true,
+  missingSpecial: true,
+  missingNumeric: true,
+};
+
 /**
  * 10+ characters
  * 1+  capital letter
@@ -34,11 +43,27 @@ export function getRegisterPasswordInvalids(password: string): RegisterPasswordE
   };
 }
 
-export const defaultRegisterPasswordError: RegisterPasswordError = {
-  errorCount: 5,
-  empty: true,
-  tooShort: true,
-  missingCapital: true,
-  missingSpecial: true,
-  missingNumeric: true,
-};
+export function getRegisterPasswordErrorMessage(error: RegisterPasswordError): string {
+  const { empty, tooShort, missingCapital, missingNumeric, missingSpecial } = error;
+
+  if (empty) {
+    return 'please enter a password';
+  }
+
+  if (tooShort) {
+    return 'password is too short';
+  }
+
+  if (missingCapital || missingNumeric || missingSpecial) {
+    const baseMsg = 'missing: ';
+    const appendages: string[] = [];
+
+    if (missingCapital) appendages.push('capital');
+    if (missingNumeric) appendages.push('number');
+    if (missingSpecial) appendages.push('special');
+
+    return baseMsg + appendages.join(', ');
+  }
+
+  return '';
+}

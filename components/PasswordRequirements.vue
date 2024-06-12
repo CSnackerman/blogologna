@@ -70,7 +70,7 @@
 
     & > :first-child {
       font-weight: bold;
-      color: orange;
+      color: cyan;
       text-shadow: 1px 1px 0px black;
       text-decoration: underline;
       text-underline-offset: 3px;
