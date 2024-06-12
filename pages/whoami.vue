@@ -16,8 +16,7 @@
       <span class="shrink">(mostly playing haha)</span>
     </p>
     <p>
-      Lately I have just been working on a pair of projects as portfolio pieces <br />
-      to get hired again somewhere as a software engineer.
+      Lately I have just been working on a pair of projects.
       <span class="shrink">(this is one of them)</span>
     </p>
     <div class="check-it-out">

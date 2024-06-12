@@ -82,6 +82,7 @@
       </form>
     </div>
     <PasswordRequirements
+      v-if="mode === 'register'"
       class="requirements-checklist"
       :errors="passwordError"
     />
@@ -208,11 +209,19 @@
   }
 
   async function login() {
-    // const { error } = await supabaseClient.auth.signInWithPassword({
-    //   email: email.value,
-    //   password: password.value,
-    // });
-    // if (error) console.log(error);
+    clearErrors();
+
+    const { error } = await supabaseClient.auth.signInWithPassword({
+      email: email.value,
+      password: password.value,
+    });
+    if (error) {
+      isEmailErrorVisible.value = true;
+      emailErrorMessage.value = error.message;
+      console.log(error);
+    }
+
+    navigateTo({ path: '/profile' });
   }
 
   function togglePasswordVisible(e: Event) {

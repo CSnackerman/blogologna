@@ -56,6 +56,7 @@
     height: $height;
     width: 100%;
     background-image: linear-gradient(to bottom, green, rgba(143, 188, 143, 0));
+    z-index: -10;
   }
 
   .foot {

@@ -16,14 +16,22 @@
       <NuxtLink to="/why">Why?</NuxtLink>
       <NuxtLink to="/articles">Articles</NuxtLink>
     </div>
-    <div class="links account">
+    <div v-if="user">
+      <AccountMenuButton />
+    </div>
+    <div
+      v-else
+      class="links account"
+    >
       <RegisterLoginLink button-type="register" />
       <RegisterLoginLink button-type="login" />
     </div>
   </nav>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const user = useSupabaseUser();
+</script>
 
 <style scoped lang="scss">
   nav {
