@@ -3,10 +3,18 @@
     <h2>Who am I?</h2>
     <p>Hey there :) my name is Colby—sometimes I go by Col.</p>
     <p>
-      I like playing and making games <br />
+      I have lived in Missouri for my entire life—mostly in the greater St. Louis area. I also lived
+      in Rolla and Springfield for a few years while I was in university.
+    </p>
+
+    <p>
+      At the University of Missouri - St. Louis (UMSL) I graduated with my bachelors in computer
+      science .
+    </p>
+    <p>
+      I like playing and making games.<br />
       <span class="shrink">(mostly playing haha)</span>
     </p>
-    <p>I live in St. Louis, Missouri.</p>
     <p>
       Lately I have just been working on a pair of projects as portfolio pieces <br />
       to get hired again somewhere as a software engineer.

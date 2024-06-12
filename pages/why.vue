@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h2>Why?</h2>
-    <h5>I am an artist and this is my canvas.</h5>
+    <h5>For growth and art.</h5>
   </div>
 </template>
 
