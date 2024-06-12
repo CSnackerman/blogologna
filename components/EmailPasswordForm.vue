@@ -34,10 +34,7 @@
           />
         </div>
         <div class="password-container">
-          <label
-            for="password-label"
-            :class="{ pulsing: isPasswordFocused }"
-          >
+          <label for="password-label">
             <span
               class="error-message"
               :style="{ opacity: isPasswordErrorVisible ? 1 : 0 }"
