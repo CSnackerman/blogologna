@@ -1,5 +1,5 @@
 <template>
-  <div class="register-page">Register</div>
+  <EmailPasswordForm mode="register" />
 </template>
 
 <script setup lang="ts"></script>

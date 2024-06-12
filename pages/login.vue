@@ -85,28 +85,7 @@
     hidden: error.value === null,
   }));
 
-  function login() {
-    try {
-      const issues = [];
-      if (email.value.length === 0 || !isValidEmail(email.value)) {
-        issues.push('invalid email');
-      }
-      if (password.value.length < 10) {
-        issues.push('password requires 10 characters');
-      }
-
-      if (issues.length > 0) {
-        throw createError(issues.join(' & '));
-      } else {
-        error.value = null;
-      }
-    } catch (err) {
-      if (err instanceof Error) {
-        const message = err.message.replace(/Error: /g, '');
-        error.value = message;
-      }
-    }
-  }
+  function login() {}
 
   function togglePasswordVisible() {
     isPasswordVisible.value = !isPasswordVisible.value;
