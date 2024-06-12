@@ -126,11 +126,11 @@
 
   // functions
   function validateRegisterEmail() {
-    emailError.value = isValidRegistrantCredentials(email.value, password.value).email;
+    emailError.value = getRegisterEmailErrors(email.value);
   }
 
   function validateRegisterPassword() {
-    passwordError.value = isValidRegistrantCredentials(email.value, password.value).password;
+    passwordError.value = getRegisterPasswordErrors(password.value);
   }
 
   function isValidRegistrant() {
@@ -185,12 +185,15 @@
     }
 
     try {
-      const { error } = await supabaseClient.auth.signUp({
+      const { data, error } = await supabaseClient.auth.signUp({
         email: email.value,
         password: password.value,
       });
 
-      if (error) {
+      if (!error) {
+        console.log('success');
+        console.log('data', data);
+      } else {
         isEmailErrorVisible.value = true;
         supabaseErrorMessage.value = error.message;
         updateRegisterEmailErrorMessages();

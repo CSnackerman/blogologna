@@ -6,7 +6,7 @@ export const defaultRegisterEmailError: RegisterEmailError = {
   invalid: true,
 };
 
-export function getRegisterEmailInvalids(email: string): RegisterEmailError {
+export function getRegisterEmailErrors(email: string): RegisterEmailError {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // chatgpt
   const isValid = emailRegex.test(email);
   const isNotEmpty = email.length > 0;

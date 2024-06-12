@@ -12,21 +12,3 @@ export interface RegisterPasswordError {
   missingNumeric: boolean;
   missingSpecial: boolean;
 }
-
-interface RegisterEmailPasswordError {
-  email: RegisterEmailError;
-  password: RegisterPasswordError;
-}
-
-export function isValidRegistrantCredentials(
-  email: string,
-  password: string,
-): RegisterEmailPasswordError {
-  const emailInvalids = getRegisterEmailInvalids(email);
-  const passwordInvalids = getRegisterPasswordInvalids(password);
-
-  return {
-    email: emailInvalids,
-    password: passwordInvalids,
-  };
-}

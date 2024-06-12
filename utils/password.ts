@@ -15,7 +15,7 @@ export const defaultRegisterPasswordError: RegisterPasswordError = {
  * 1+  special character
  * 1+  numeric character
  */
-export function getRegisterPasswordInvalids(password: string): RegisterPasswordError {
+export function getRegisterPasswordErrors(password: string): RegisterPasswordError {
   const capitalCharRegex = /[A-Z]+/;
   const specialCharRegex = /[!@#$%^&*()\-_=+]+/;
   const numericRegex = /\d+/;
