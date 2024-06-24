@@ -1,7 +1,7 @@
 <template>
   <nav>
     <NuxtLink to="/whoami">who am i?</NuxtLink>
-    <NuxtLink to="/contact">contact me</NuxtLink>
+    <NuxtLink to="/contact">contact</NuxtLink>
     <NuxtLink to="/faq">faq</NuxtLink>
     <NuxtLink to="/privacy">privacy policy</NuxtLink>
     <NuxtLink to="/sitemap">sitemap</NuxtLink>

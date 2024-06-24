@@ -1,5 +1,8 @@
 <template>
-  <h2>Sitemap</h2>
+  <div class="sitemap-page">
+    <h2>Sitemap</h2>
+    <p>todo</p>
+  </div>
 </template>
 
 <script setup lang="ts"></script>

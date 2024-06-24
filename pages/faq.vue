@@ -1,5 +1,8 @@
 <template>
-  <h2>FAQ</h2>
+  <div class="faq-page">
+    <h2>FAQ</h2>
+    <p>Now taking suggestions.</p>
+  </div>
 </template>
 
 <script setup lang="ts"></script>

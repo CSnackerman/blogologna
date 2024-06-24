@@ -29,6 +29,7 @@
       Data is open and free. You can view statistics about authors, articles, comments, and
       commenters.
     </p>
+    <p style="margin: 10rem; text-align: end; font-size: 0.7rem; opacity: 0.5">Eventually...</p>
   </div>
 </template>
 

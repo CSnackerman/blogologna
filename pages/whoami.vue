@@ -8,13 +8,23 @@
     </p>
 
     <p>
-      At the University of Missouri - St. Louis (UMSL) I graduated with my bachelors in computer
-      science .
+      I graduated with my bachelors in computer science at the
+      <span style="text-decoration: underline; text-decoration-thickness: 1px"
+        >University of Missouri - St. Louis (UMSL)</span
+      >
     </p>
     <p>
-      I like playing and making games.<br />
+      <span>I like playing and making games.</span>
       <span class="shrink">(mostly playing haha)</span>
     </p>
+    <div style="margin-left: 2rem; font-size: 0.9rem">
+      <label>Lately I've been playing</label>
+      <ul>
+        <li>Elden Ring (DLC)</li>
+        <li>Cocoon</li>
+      </ul>
+    </div>
+
     <p>
       Lately I have just been working on a pair of projects.
       <span class="shrink">(this is one of them)</span>
