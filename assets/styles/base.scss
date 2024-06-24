@@ -12,12 +12,12 @@
 
 html,
 body {
-  height: 100svh;
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow-y:auto;
 
   font-size: 1.1em;
-  // background-color: darkseagreen;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(0deg, darkseagreen, darkgreen);
